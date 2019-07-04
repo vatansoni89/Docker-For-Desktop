@@ -1,6 +1,12 @@
 helm package clusterfitusecaseapihelm
 
-helm install clusterfitusecaseapihelm-0.1.0.tgz
+Install/upgrade/history/Rollback:
+
+helm install clusterfitusecaseapihelm-0.1.0.tgz --name clusv1
+helm upgrade clusv1 clusterfitusecaseapihelm-0.1.0.tgz
+helm history clusv1
+helm rollback [flags] [RELEASE] [REVISION]:
+helm rollback clusv1 1
 
 
 Build:
