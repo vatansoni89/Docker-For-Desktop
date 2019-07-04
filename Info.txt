@@ -19,3 +19,6 @@ eyJhbGciOiJSUzI1NiIsImtpZCI6IiJ9.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiw
 
 How Deployment, Service & Ingress are Related in Kubernetes Manifest?:
 https://medium.com/@dwdraju/how-deployment-service-ingress-are-related-in-their-manifest-a2e553cf0ffb
+
+Deleting Helm release (everything):
+helm del --purge clusv1
