@@ -8,6 +8,7 @@ helm history clusv1
 helm rollback [flags] [RELEASE] [REVISION]:
 helm rollback clusv1 1
 
+helm status clusterfitusecaseapihelm-test: Gives best info, and external IP to hit service.
 
 Build:
 
