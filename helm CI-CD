@@ -1,4 +1,4 @@
-helm create ahah
+To create helm folder: helm create folderName
 
 helm package clusterfitusecaseapihelm
 
