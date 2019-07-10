@@ -1,0 +1,6 @@
+Get info about pod:           kubectl describe pod clusterfitusecaseapihelm-test-test-connection
+To get reason for bad health: kubectl logs  clusterfitusecaseapihelm-test-test-connection
+To get into container:        kubectl exec -it clusterfitusecaseapihelm-test-5468ffff7b-7plt7 bash
+
+Edit:                         kubectl edit configmaps clusterfitusecaseapihelm-test-tests 
+Delete pod:                   kubectl delete pod clusterfitusecaseapihelm-test-test-connection
