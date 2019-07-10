@@ -1,0 +1,31 @@
+set -x
+set -o pipefail
+
+BUILD_ID=$(Build.BuildId)
+VALUES_FILE=$(System.DefaultWorkingDirectory)/CloudServices.Clusterfit.Clusterfit_k8s.Alpha.MA/Deployment/clusterfitusecaseapihelm/values.yaml
+
+# delete test pods left over last failures
+kubectl delete pod clusterfitusecaseapihelm-test-test-connection --ignore-not-found
+
+# Install test service
+helm install $(System.DefaultWorkingDirectory)/CloudServices.Clusterfit.Clusterfit_k8s.Alpha.MA/Deployment/clusterfitusecaseapihelm-0.1.0.tgz --name "clusterfitusecaseapihelm-test" -f "$VALUES_FILE" --set image.tag=$(Build.BuildId)  --set environment=development
+
+sleep 2m
+
+helm test "clusterfitusecaseapihelm-test"
+
+TEST_RESULT=$?
+
+kubectl logs clusterfitusecaseapihelm-test-test-connection
+
+if [ $TEST_RESULT -ne 0 ]; then
+    echo "Tests failed!" 
+	#helm delete "clusterfitusecaseapihelm-test" --purge
+	exit 1 # terminate and indicate error
+fi
+
+#helm delete "clusterfitusecaseapihelm-test" --purge
+
+# The tests passed remove the test pod as none needs to see the logs
+#kubectl delete pod clusterfitusecaseapihelm-test-test-connection
+
