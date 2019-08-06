@@ -9,3 +9,6 @@ Get What space and memory being consumed and left on node:
 1. kubectl get nodes
 #kubectl describe nodes nodeName
 2. kubectl describe nodes aks-nodepool1-87510423-0
+
+Get CPU and Memory being used by a POD:
+kubectl top pods
