@@ -11,13 +11,13 @@ to see the file : sudo nano filename
 service status check: systemctl status nginx.service
 
 create sym link with relative path:
-proxyuser@proxy:~$ sudo ln -s ../sites-available/kioskapiv3.cloudapi-staging.sivantos.com.cn kioskapiv3.cloudapi-staging.sivantos.com.cn
+proxyuser@proxy:~$ sudo ln -s ../sites-available/filename filename
 
 Site-enabled path:
 proxyuser@proxy:~$ cd /etc/nginx/sites-enabled
 
 moving file from one to another folder:
-proxyuser@proxy:~$ sudo mv /tmp/kioskapiv3.cloudapi-staging.sivantos.com.cn .
+proxyuser@proxy:~$ sudo mv /tmp/filename .
 
 To go to home temp folder:
 @proxy:~$ cd /tmp
