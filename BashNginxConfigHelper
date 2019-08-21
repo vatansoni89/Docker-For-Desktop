@@ -32,4 +32,4 @@ create sym link (working):
 proxyuser@proxy:~$ sudo ln -s /etc/nginx/sites-available/filename filename
 
 list of content:
-ln -l
+ls -l
