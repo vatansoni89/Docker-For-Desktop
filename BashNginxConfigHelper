@@ -1,0 +1,35 @@
+nginx restart: proxyuser@proxy:~$ sudo service nginx restart
+
+create sym link: oxyuser@proxy:~$ sudo ln -s /etc/nginx/filename filename
+
+remove file: sudo rm filename
+
+read-write mode: sudo chmod 775 filename //664
+
+to see the file : sudo nano filename
+
+service status check: systemctl status nginx.service
+
+create sym link with relative path:
+proxyuser@proxy:~$ sudo ln -s ../sites-available/kioskapiv3.cloudapi-staging.sivantos.com.cn kioskapiv3.cloudapi-staging.sivantos.com.cn
+
+Site-enabled path:
+proxyuser@proxy:~$ cd /etc/nginx/sites-enabled
+
+moving file from one to another folder:
+proxyuser@proxy:~$ sudo mv /tmp/kioskapiv3.cloudapi-staging.sivantos.com.cn .
+
+To go to home temp folder:
+@proxy:~$ cd /tmp
+
+Etc folder:
+@proxy:~$ cd /etc
+
+sites-enabled folder:
+proxyuser@proxy:~$ cd /etc/nginx/sites-enabled
+
+create sym link (working):
+proxyuser@proxy:~$ sudo ln -s /etc/nginx/sites-available/filename filename
+
+list of content:
+ln -l
