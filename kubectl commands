@@ -5,7 +5,7 @@ To get into container:        kubectl exec -it clusterfitusecaseapihelm-test-546
 Edit:                         kubectl edit configmaps clusterfitusecaseapihelm-test-tests 
 Delete pod:                   kubectl delete pod clusterfitusecaseapihelm-test-test-connection
 
-Get What space and memory being consumed and left on node:
+Get What space and memory being consumed and left on node/ resource status:
 1. kubectl get nodes
 #kubectl describe nodes nodeName
 2. kubectl describe nodes aks-nodepool1-87510423-0
