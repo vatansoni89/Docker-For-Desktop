@@ -10,6 +10,9 @@ helm history clusv1
 helm rollback [flags] [RELEASE] [REVISION]:
 helm rollback clusv1 1
 
+Deleting Helm release (everything):
+helm del --purge clusv1
+
 helm status clusterfitusecaseapihelm-test: Gives best info, and external IP to hit service.
 
 helm template clusterfitusecaseapihelm  --name sampletemplaterelease -f "clusterfitusecaseapihelm/values.production.yaml" --set image.tag=12345 --set ingress.enabled=true
