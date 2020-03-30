@@ -1,0 +1,4 @@
+az cloud set --name AzureChinaCloud
+az login
+#az account set --subscription b957ad3f-aaf5-4b46-8590-12121212
+az aks get-credentials --resource-group siv-kubernetes-pr --name siv-kubernetes-pr
