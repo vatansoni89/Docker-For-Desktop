@@ -1,6 +1,10 @@
 1. az cloud set --name AzureChinaCloud(Or AzureCloud)
 2. az login
 #az account set --subscription b957ad3f-aaf5-4b46-8590-12121212
+
+## Set ur context St or Prod:
 3. az aks get-credentials --resource-group siv-kubernetes-st --name siv-kubernetes-st (or az aks get-credentials --resource-group siv-kubernetes-pr --name siv-kubernetes-pr)
+
+## After set, check ur context:
 4. check your current context if u r in st or pr: kubectl config current-context
 
