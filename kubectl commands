@@ -19,8 +19,8 @@ kubectl port-forward patientdataservicesk8s-patientdataserviceshelm-797857fc57-b
 
 Go inside pod and check appsettings.json
 kubectl get pods
-kubectl exec -it telecarehidb-staging-6789f768bc-6mtpr
 kubectl exec -it  telecarehidb-staging-6789f768bc-6mtpr -- /bin/bash
+cat config/..data/appsettings.json
 
 Portforward to mongo and service:
 kubectl get services
