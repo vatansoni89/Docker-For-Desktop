@@ -21,3 +21,9 @@ Go inside pod and check appsettings.json
 kubectl get pods
 kubectl exec -it telecarehidb-staging-6789f768bc-6mtpr
 kubectl exec -it  telecarehidb-staging-6789f768bc-6mtpr -- /bin/bash
+
+Portforward to mongo and service:
+kubectl get services
+kubectl port-forward service/mongo 27017:27017
+kubectl port-forward service/telecarehidb-development 9000:80
+
