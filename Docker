@@ -250,7 +250,8 @@ docker run -v c:/dump:/dump -e HOST="host-name-from-cosmos-conn-settings" -e POR
 
 docker run -d cosmosdump15
 docker exec -it 403f3c40e522 /bin/bash
-
+Going inside a container:
+  docker exec -it  [containerid or name] /bin/bash
 
 
   
