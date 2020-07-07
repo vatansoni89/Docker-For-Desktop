@@ -241,3 +241,16 @@ its views.
 docker run --rm -e "ASPNETCORE_ENVIRONMENT=Development" -it -p 7842:80  june17-v1
 
 http://localhost:7842/api/status
+
+---------------------------------------------------------ERHART----------------------------------------------------
+docker ps
+docker images
+docker build -t cosmosdump19 .
+docker run -v c:/dump:/dump -e HOST="host-name-from-cosmos-conn-settings" -e PORT="10255" -e OUT="/dump" -e USER="username" -e PASSWORD="sample-psw" cosmosdump19
+
+docker run -d cosmosdump15
+docker exec -it 403f3c40e522 /bin/bash
+
+
+
+  
