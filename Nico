@@ -1,1 +1,22 @@
 https://sivantos.sharepoint.com/:w:/r/sites/CloudFoundation/_layouts/15/doc2.aspx?action=edit&sourcedoc=%7BDC199D57-A2A0-4351-80D4-EED9A71EE4FD%7D
+
+
+PS C:\Users\z003d4ks> az logout
+PS C:\Users\z003d4ks> az login
+You have logged in. Now let us find all the subscriptions to which you have access...
+[
+  {
+    ,.,.,.,.,.,
+  }
+]
+PS C:\Users\z003d4ks> az account set --subscription b957ad3f-aaf5-4b46-trtyrtyrtyrytrty
+PS C:\Users\z003d4ks> az aks get-credentials --resource-group siv-kubernetes-st --name siv-kubernetes-st
+The behavior of this command has been altered by the following extension: aks-preview
+A different object named clusterUser_siv-kubernetes-st_siv-kubernetes-st already exists in your kubeconfig file.
+Overwrite? (y/n): y
+Merged "siv-kubernetes-st" as current context in C:\Users\z003d4ks\.kube\config
+PS C:\Users\z003d4ks> kubectl get pods
+To sign in, use a web browser to open the page https://microsoft.com/devicelogin and enter the code CRTRTRTRT to authenticate.
+NAME                                                              READY   STATUS      RESTARTS   AGE
+admin-portal-staging-694577c788-dqmq7                             1/1     Running     1          13d
+admin-portal-staging-694577c788-fbm8w                             1/1     Running     2          13d
